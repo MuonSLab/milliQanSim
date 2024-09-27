@@ -2,6 +2,20 @@
 
 This is the simulation for the MilliQan Detector. Compatibility: Geant 4.9+, ROOT 5.34 and other ROOT5 or ROOT6 onward (ideally ROOT6)
 
+# Quick start for TRIDENT
+```bash
+# build program
+mkdir -p build && cd build
+cmake ../
+make -j8
+
+# run program
+if [ ! -d config/ ]; then
+    cp -r ../inputData/config .
+fi
+./MilliQan ../runMac/mcp_novis.mac
+```
+
 ================  Running the simulation  ========================
 
 To run the sim:
